@@ -24,7 +24,6 @@ func MapStream(list []string, fn func(string) int) <-chan int {
 			result <- fn(s)
 		}
 	}()
-
 	return result
 }
 

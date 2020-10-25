@@ -1,7 +1,6 @@
 package map_reduce
 
 import (
-	"sort"
 	"testing"
 
 	go_concurrent_utils "github.com/mastanca/go-concurrent-utils"
@@ -51,7 +50,6 @@ func TestMapStream(t *testing.T) {
 	for range strings {
 		result = append(result, <-out)
 	}
-	sort.Ints(result)
 	assert.Equal(t, []int{1, 2, 3, 4}, result)
 }
 
